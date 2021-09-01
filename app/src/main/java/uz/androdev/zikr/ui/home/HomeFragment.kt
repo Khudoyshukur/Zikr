@@ -1,27 +1,17 @@
 package uz.androdev.zikr.ui.home
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import uz.androdev.zikr.MainActivity
+import dagger.hilt.android.AndroidEntryPoint
+import uz.androdev.zikr.ui.MainActivity
 import uz.androdev.zikr.databinding.FragmentHomeBinding
+import uz.androdev.zikr.ui.BaseFragment
 
-class HomeFragment : Fragment() {
-    private var binding: FragmentHomeBinding? = null
+@AndroidEntryPoint
+class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
     private val viewModel: HomeViewModel by viewModels()
     private var adapter: ZikrAdapter? = null
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentHomeBinding.inflate(layoutInflater)
-        return binding!!.root
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -31,7 +21,7 @@ class HomeFragment : Fragment() {
 
     private fun initUI() {
         adapter = ZikrAdapter()
-        binding?.recyclerView?.adapter = adapter
+        binding.recyclerView.adapter = adapter
 
         adapter?.onComplete = { zikr ->
             viewModel.removeZikr(zikr)
@@ -47,7 +37,7 @@ class HomeFragment : Fragment() {
             adapter?.submitList(it)
         }
 
-        viewModel.refreshing.observe(viewLifecycleOwner){ isRefreshing -> }
+        viewModel.refreshing.observe(viewLifecycleOwner) { isRefreshing -> }
     }
 
     fun onRefresh() {

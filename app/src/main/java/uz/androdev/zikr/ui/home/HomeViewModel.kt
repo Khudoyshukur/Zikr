@@ -4,11 +4,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import uz.androdev.zikr.model.Zikr
+import uz.androdev.shared.model.Zikr
+import javax.inject.Inject
 
-class HomeViewModel : ViewModel() {
+@HiltViewModel
+class HomeViewModel @Inject constructor(
+
+) : ViewModel() {
 
     private val _zikrList = MutableLiveData<List<Zikr>>()
     val zikrList: LiveData<List<Zikr>> get() = _zikrList

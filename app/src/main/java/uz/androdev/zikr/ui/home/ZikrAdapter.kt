@@ -5,8 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import uz.androdev.shared.model.Zikr
 import uz.androdev.zikr.databinding.ItemZikrBinding
-import uz.androdev.zikr.model.Zikr
 
 class ZikrAdapter: ListAdapter<Zikr, ZikrAdapter.ViewHolder>(Util()) {
 
@@ -22,7 +22,7 @@ class ZikrAdapter: ListAdapter<Zikr, ZikrAdapter.ViewHolder>(Util()) {
         holder.bind(getItem(position))
     }
 
-    inner class ViewHolder(val binding: ItemZikrBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(private val binding: ItemZikrBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(zikr: Zikr) {
             binding.zikrArabic.text = zikr.zikrArabic
             binding.zikrUzbek.text = zikr.zikrUzbek

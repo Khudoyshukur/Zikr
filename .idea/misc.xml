@@ -4,8 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1765625" />
-        <entry key="app/src/main/res/layout/item_zikr.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3927083333333333" />
+        <entry key="app/src/main/res/layout/item_zikr.xml" value="0.4859437751004016" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1640625" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1640625" />
       </map>

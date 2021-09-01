@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Zikr"
 include ':app'
+include ':shared'

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "249527642673",
+    "project_id": "zikr-61925",
+    "storage_bucket": "zikr-61925.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249527642673:android:89d1c9cb938c6616724310",
+        "android_client_info": {
+          "package_name": "uz.androdev.zikr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249527642673-vlf9ujsdnplm0gd9qnfn8cv3udq8uvfu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRTxK8bVtw4e-tW1UDLks6y5qVQqPLmwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "249527642673-vlf9ujsdnplm0gd9qnfn8cv3udq8uvfu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

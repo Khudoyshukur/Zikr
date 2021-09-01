@@ -1,11 +1,14 @@
-package uz.androdev.zikr
+package uz.androdev.zikr.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
+import dagger.hilt.android.AndroidEntryPoint
+import uz.androdev.zikr.R
 import uz.androdev.zikr.databinding.ActivityMainBinding
 import uz.androdev.zikr.ui.home.HomeFragment
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     var binding: ActivityMainBinding? = null
